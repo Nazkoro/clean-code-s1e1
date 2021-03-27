@@ -4,32 +4,36 @@ body {
   color: #333;
   font-family: Lato, sans-serif;
 }
-.container {
+.main {
   width: 500px;
   margin: 0 auto;
   display: block;
   text-align: right;
 }
-.container img {
+.main img {
   width: 100%;
 }
-.container .more-inf {
+.main .more-inf {
   font-family: fantasy, cursive;
 }
 
 @media (max-width: 768px) {
-  .container {
+  .main {
     text-align: center;
   }
 }
-.main {
+.container {
   display: block;
-  width: 400px;
+  width: 500px;
   margin: 0 auto 0;
 }
 .task {
   width: 56%;
   display: inline-block;
+  flex-grow: 1;
+}
+.task-row-wrapper {
+  display: flex;
 }
 ul {
   margin: 0;
@@ -99,6 +103,10 @@ li {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 li > * {
   vertical-align: middle;
@@ -139,11 +147,11 @@ ul li input[type="text"] {
   display: none;
 }
 
-ul li.edit-mode input[type="text"] {
+.edit-mode input[type="text"] {
   display: inline-block;
   width: 224px;
 }
 
-ul li.edit-mode label {
-  display: none;
+.edit-mode label {
+  display: none
 }
